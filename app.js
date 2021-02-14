@@ -169,3 +169,31 @@ const spinner = ()=>{
   const spinner = document.getElementById("spinner");
   spinner.classList.toggle("d-none");
 }
+
+//add button duration on click
+
+const btnPlus =  document.getElementById("btnPlus");
+const btnMinus =  document.getElementById("btnMinus");
+
+btnPlus.addEventListener("click", function(){
+  durationChangeFunction(true);
+});
+
+btnMinus.addEventListener("click", function(){
+  durationChangeFunction(false);
+});
+
+function durationChangeFunction(flag){
+  const durationInput = document.getElementById("duration");
+  const durationValue = durationInput.value;
+  let durationChange = +durationValue;
+  if(flag){
+    durationChange = durationChange + 100;
+  }else{
+    if(durationChange > 100 ){
+      durationChange = durationChange - 100;
+    }
+  }
+  
+  durationInput.value = durationChange;
+}

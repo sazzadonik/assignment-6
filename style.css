@@ -81,3 +81,7 @@ img {
   background-color: wheat;
   border-radius: 10px;
 }
+
+#adjustDurationField {
+  width: 200px;
+}
